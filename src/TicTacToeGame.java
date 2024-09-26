@@ -5,12 +5,15 @@ import javax.swing.*;
 
 
 public class TicTacToeGame {
+
+        // Creating JFrame Here
+        
         JFrame frame = new JFrame("Tic-Tac-Toe");
         JLabel textLabel = new JLabel();
         JPanel playpanel = new JPanel();
 
 
-
+        // Adding Buttons
         JButton[][] board = new JButton[3][3];
 
         String playerX = "X";
@@ -21,6 +24,7 @@ public class TicTacToeGame {
         int turns = 0;
 
         TicTacToeGame() {
+            // Setting the Frame Properties
             frame.setVisible(true);
 
             frame.setSize(600, 650);
@@ -70,6 +74,8 @@ public class TicTacToeGame {
             }
 
         }
+
+        // Checking Winner
     void checkWinner() {
         //horizontal
         for (int r = 0; r < 3; r++) {
